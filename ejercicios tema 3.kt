@@ -84,6 +84,7 @@ fun main() {
         return -1
     }
 */
+/*
 fun main(){
     val vector= IntArray(20)
     var usuario=""
@@ -101,3 +102,136 @@ fun main(){
 
     }
 }
+*/
+/*
+Realiza un programa que inicie dos vectores
+de 3 elementos y los sume en un tercero.
+Ejemplo:
+
+*/
+/*
+fun main () {
+    sumaVectores()
+    sumaVectoresEficiente()
+}
+
+fun sumaVectoresEficiente() {
+
+    var vecUno = ArrayList<Int>()
+    var vecDos = ArrayList<Int>()
+    var resultado = ArrayList<Int>()
+
+    for (i in 1..3) {
+        vecUno.add((1..10).random())
+        vecDos.add((1..10).random())
+    }
+
+    for (i in 0..2) {
+        resultado.add(vecUno[i] + vecDos[i])
+    }
+
+    println("Vector 1: $vecUno")
+    println("Vector 2: $vecDos")
+    println("Resultado: $resultado")
+}
+
+fun sumaVectores() {
+
+    var vecUno = ArrayList<Int>()
+    var vecDos = ArrayList<Int>()
+    var resultado = ArrayList<Int>()
+
+    vecUno.add((1..10).random())
+    vecUno.add((1..10).random())
+    vecUno.add((1..10).random())
+
+    vecDos.add((1..10).random())
+    vecDos.add((1..10).random())
+    vecDos.add((1..10).random())
+
+    resultado.add(vecUno[0] + vecDos[0])
+    resultado.add(vecUno[1] + vecDos[1])
+    resultado.add(vecUno[2] + vecDos[2])
+
+    println(vecUno)
+    println(vecDos)
+    println(resultado)
+
+}
+*/
+
+/*
+fun main () {
+    var valor = ""
+    var vec = ArrayList<Int>()
+    var seCumple = false
+
+    do {
+        println("Introduce un valor:")
+        valor = readln()
+
+        var v = valor.toIntOrNull()
+
+        if (v != null) {
+            for (i in 1..10) {
+                vec.add(v++)
+            }
+            seCumple = true
+        }
+
+    }while (!seCumple)
+
+    println(vec)
+}
+*/
+/*
+fun main() {
+    var vector = ArrayList<String>()
+    var panelVacio = ArrayList<String>()
+    var mosca = ""
+    var ganar = false
+    var posiciones = ""
+
+    for (i in 1..10) {
+        vector.add("-")
+        panelVacio.add("-")
+    }
+
+    var posicionMosca = (0..9).random()
+    vector[posicionMosca] = mosca
+
+    do {
+        println("Bienvenido a la mosca")
+        println()
+        println(panelVacio)
+        println()
+        println("Elija una de las posiciones (0 a 9)")
+        posiciones = readln()
+
+        var n = posiciones.toIntOrNull()
+
+        if (n != null && n in 0..9) {
+            if (vector[n] == "") {
+                println("Encontraste la mosca")
+                ganar = true
+            } else {
+                if ((n > 0 && vector[n - 1] == "") ||
+                    (n < 9 && vector[n + 1] == "*")) {
+
+                    println("Estuvo cerca, pero revolotea")
+
+                    vector[posicionMosca] = "-"
+                    posicionMosca = (0..9).random()
+                    vector[posicionMosca] = mosca
+
+                } else {
+                    println("Fallaste")
+                }
+            }
+        } else {
+            println("Introduce una posición válida entre 0 y 9")
+        }
+
+    } while (!ganar)
+}
+*/
